@@ -81,4 +81,10 @@
  */
 + (UIImage *)jsq_defaultPauseImage;
 
+- (UIImage *)jsq_thumbnailImage:(NSInteger)thumbnailSize croppedSquare:(BOOL)cropped;
+
+- (UIImage *)jsq_resizeImageWithContentMode:(UIViewContentMode)contentMode
+                                     bounds:(CGSize)bounds
+                       interpolationQuality:(CGInterpolationQuality)quality;
+
 @end
