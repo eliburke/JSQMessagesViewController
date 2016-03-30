@@ -17,6 +17,7 @@
 //
 
 #import "DemoMessagesViewController.h"
+#import "JSQMessagesCollectionViewCellCentered.h"
 
 @implementation DemoMessagesViewController
 
@@ -93,6 +94,9 @@
      *
      *  self.inputToolbar.maximumHeight = 150;
      */
+    
+    [self.collectionView registerNib:[JSQMessagesCollectionViewCellCentered nib] forCellWithReuseIdentifier:[JSQMessagesCollectionViewCellCentered cellReuseIdentifier]];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -491,6 +495,14 @@
 
 - (UICollectionViewCell *)collectionView:(JSQMessagesCollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (1) {
+        JSQMessagesCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:JSQMessagesCollectionViewCellCentered.cellReuseIdentifier forIndexPath:indexPath];
+        cell.textView.text = @"this cell is centered";
+        cell.backgroundColor = [UIColor lightGrayColor];
+        cell.textView.textAlignment = NSTextAlignmentCenter;
+        cell.textView.backgroundColor = [UIColor darkGrayColor];
+        return cell;
+    }
     /**
      *  Override point for customizing cells
      */
