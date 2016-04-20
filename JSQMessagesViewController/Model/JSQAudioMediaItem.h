@@ -29,7 +29,7 @@
 /**
  *  The delegate object for audio event notifications
  */
-@property (nonatomic, weak) id<JSQAudioMediaItemDelegate> delegate;
+@property (nonatomic, weak, nullable) id<JSQAudioMediaItemDelegate> delegate;
 
 /**
  * The configuration object for the audio media view.

@@ -24,7 +24,9 @@
 
 @interface JSQMediaItem ()
 
-@property (strong, nonatomic) UIView *cachedPlaceholderView;
+@property (strong, nonatomic) UIView * cachedPlaceholderView;
+@property (copy, nonatomic)   NSString * mediaLabel;
+@property (strong, nonatomic) UIColor * mediaLabelColor;
 
 @end
 
@@ -102,7 +104,25 @@
         self.cachedPlaceholderView = view;
     }
     
+    [self labelCachedMediaView];
+    
     return self.cachedPlaceholderView;
+}
+
+- (void)setMediaLabel:(NSString*)mediaLabel color:(UIColor*)mediaLabelColor {
+    _mediaLabel = mediaLabel;
+    _mediaLabelColor = mediaLabelColor;
+}
+
+- (void)labelCachedMediaView {
+    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
+    
+    // add effect to an effect view
+    UIVisualEffectView * effectView = [[UIVisualEffectView alloc]initWithEffect:blur];
+    effectView.frame = self.cachedPlaceholderView.frame;
+    
+    // add the effect view to the image view
+    [self.cachedPlaceholderView addSubview:effectView];
 }
 
 - (NSUInteger)mediaHash

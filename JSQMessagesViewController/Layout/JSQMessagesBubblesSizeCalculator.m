@@ -131,7 +131,7 @@
         CGFloat verticalInsets = verticalContainerInsets + verticalFrameInsets + self.additionalInset;
 
         //  same as above, an extra 2 points of magix
-        CGFloat finalWidth = MAX(stringSize.width + horizontalInsetsTotal, self.minimumBubbleWidth) + self.additionalInset;
+        CGFloat finalWidth = fmax(stringSize.width + horizontalInsetsTotal, self.minimumBubbleWidth) + self.additionalInset;
 
         finalSize = CGSizeMake(finalWidth, stringSize.height + verticalInsets);
     }
@@ -171,7 +171,7 @@
     NSInteger horizontalInsets = layout.sectionInset.left + layout.sectionInset.right + self.additionalInset;
     CGFloat width = CGRectGetWidth(layout.collectionView.bounds) - horizontalInsets;
     CGFloat height = CGRectGetHeight(layout.collectionView.bounds) - horizontalInsets;
-    self.layoutWidthForFixedWidthBubbles = MIN(width, height);
+    self.layoutWidthForFixedWidthBubbles = fmin(width, height);
     
     return self.layoutWidthForFixedWidthBubbles;
 }

@@ -55,4 +55,14 @@
  */
 - (void)clearCachedMediaViews;
 
+/**
+ *
+ */
+- (void)labelCachedMediaView;
+
+/**
+ *
+ */
+- (void)setMediaLabel:(NSString*)text color:(UIColor*)color;
+
 @end

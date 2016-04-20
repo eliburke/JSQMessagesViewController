@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "90530B99EB0008E7A50951FDFBE02169118FA649",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "90530B99EB0008E7A50951FDFBE02169118FA649" : 0,
+    "0D7533C70B3E77874DB4DC9E2131A9B1895C2C86" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "7A91B9F9-AD15-49D9-A3F7-3A2404847639",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "90530B99EB0008E7A50951FDFBE02169118FA649" : "JSQMessagesViewController\/",
+    "0D7533C70B3E77874DB4DC9E2131A9B1895C2C86" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "JSQMessages",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "JSQMessages.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "gitlab.private.sec:spotbeam-dev\/spotbeam-iphone.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "0D7533C70B3E77874DB4DC9E2131A9B1895C2C86"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/eliburke\/JSQMessagesViewController.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "90530B99EB0008E7A50951FDFBE02169118FA649"
+    }
+  ]
+}
