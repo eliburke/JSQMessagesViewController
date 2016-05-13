@@ -35,6 +35,7 @@
 #import "JSQMessagesCollectionViewFlowLayout.h"
 #import "JSQMessagesCollectionViewLayoutAttributes.h"
 #import "JSQMessagesCollectionViewFlowLayoutInvalidationContext.h"
+#import "JSQAudioMediaViewAttributes.h"
 
 //  Toolbar
 #import "JSQMessagesComposerTextView.h"
@@ -52,6 +53,8 @@
 
 #import "JSQMessagesBubbleImage.h"
 #import "JSQMessagesAvatarImage.h"
+
+#import "JSQAudioMediaViewAttributes.h"
 
 //  Protocols
 #import "JSQMessageData.h"
