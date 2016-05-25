@@ -520,10 +520,10 @@ const CGFloat kJSQMessagesCollectionViewAvatarSizeDefault = 30.0f;
         CGFloat scrollResistance = distanceFromTouch / self.springResistanceFactor;
         
         if (self.latestDelta < 0.0f) {
-            center.y += fmax(self.latestDelta, self.latestDelta * scrollResistance);
+            center.y += MAX(self.latestDelta, self.latestDelta * scrollResistance);
         }
         else {
-            center.y += fmin(self.latestDelta, self.latestDelta * scrollResistance);
+            center.y += MIN(self.latestDelta, self.latestDelta * scrollResistance);
         }
         item.center = center;
     }

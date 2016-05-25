@@ -336,8 +336,8 @@ typedef void (^JSQAnimationCompletionBlock)(BOOL finished);
             newKeyboardViewFrame.origin.y = touch.y + self.keyboardTriggerPoint.y;
 
             //  bound frame between bottom of view and height of keyboard
-            newKeyboardViewFrame.origin.y = fmin(newKeyboardViewFrame.origin.y, contextViewWindowHeight);
-            newKeyboardViewFrame.origin.y = fmax(newKeyboardViewFrame.origin.y, contextViewWindowHeight - keyboardViewHeight);
+            newKeyboardViewFrame.origin.y = MIN(newKeyboardViewFrame.origin.y, contextViewWindowHeight);
+            newKeyboardViewFrame.origin.y = MAX(newKeyboardViewFrame.origin.y, contextViewWindowHeight - keyboardViewHeight);
 
             if (CGRectGetMinY(newKeyboardViewFrame) == CGRectGetMinY(self.keyboardView.frame)) {
                 return;

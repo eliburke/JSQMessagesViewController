@@ -459,10 +459,6 @@ JSQMessagesKeyboardControllerDelegate>
     //  workaround for really long messages not scrolling
     //  if last message is too long, use scroll position bottom for better appearance, else use top
     //  possibly a UIKit bug, see #480 on GitHub
-    // EJB -- commented out due to merge conflict
-    //NSUInteger finalRow = fmax(0, [self.collectionView numberOfItemsInSection:0] - 1);
-    //NSIndexPath *finalIndexPath = [NSIndexPath indexPathForItem:finalRow inSection:0];
-    //CGSize finalCellSize = [self.collectionView.collectionViewLayout sizeForItemAtIndexPath:finalIndexPath];
     CGSize cellSize = [self.collectionView.collectionViewLayout sizeForItemAtIndexPath:indexPath];
     CGFloat maxHeightForVisibleMessage = CGRectGetHeight(self.collectionView.bounds) - self.collectionView.contentInset.top - CGRectGetHeight(self.inputToolbar.bounds);
     UICollectionViewScrollPosition scrollPosition = (cellSize.height > maxHeightForVisibleMessage) ? UICollectionViewScrollPositionBottom : UICollectionViewScrollPositionTop;
@@ -1017,10 +1013,10 @@ JSQMessagesKeyboardControllerDelegate>
 {
     CGFloat proposedHeight = self.toolbarHeightConstraint.constant + dy;
 
-    CGFloat finalHeight = fmax(proposedHeight, self.inputToolbar.preferredDefaultHeight);
+    CGFloat finalHeight = MAX(proposedHeight, self.inputToolbar.preferredDefaultHeight);
 
     if (self.inputToolbar.maximumHeight != NSNotFound) {
-        finalHeight = fmin(finalHeight, self.inputToolbar.maximumHeight);
+        finalHeight = MIN(finalHeight, self.inputToolbar.maximumHeight);
     }
 
     if (self.toolbarHeightConstraint.constant != finalHeight) {
